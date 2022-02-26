@@ -23,7 +23,7 @@ uint64_t nPrime(uint64_t n) {
         return 2;
     }
     uint64_t check = 1;
-    for (uint64_t i = 3;; i += 2) {
+    for (uint64_t i = 3; true; i += 2) {
         if (checkPrime(i)) {
             ++check;
         }
@@ -34,7 +34,7 @@ uint64_t nPrime(uint64_t n) {
 }
 
 uint64_t nextPrime(uint64_t value) {
-    for (++value;; value++) {
+    for (++value; true; value++) {
         if (checkPrime(value)) {
             return value;
         }
